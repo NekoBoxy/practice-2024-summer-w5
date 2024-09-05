@@ -1,2 +1,20 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+
+.nav {
+  margin-top: 32px;
+
+  .nav-item {
+    margin-left: 32px;
+
+    &:hover {
+      background-color: cadetblue;
+    }
+  }
+
+  .navbar-brand {
+    // margin-right: 113px;
+    margin-bottom: 42px;
+  }
+}

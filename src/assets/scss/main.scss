@@ -1,20 +1,36 @@
+// 英文字體 - Roboto Mono & lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
 
+
+
+
 .nav {
   margin-top: 32px;
+  margin-left: 32px;
+
+  .navbar-brand {
+    margin-bottom: 32px;
+  }
 
   .nav-item {
-    margin-left: 32px;
 
     &:hover {
       background-color: cadetblue;
     }
   }
 
-  .navbar-brand {
-    // margin-right: 113px;
-    margin-bottom: 42px;
+  .avatar {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+
+    img {
+      max-width: 100%;
+    }
   }
+
 }

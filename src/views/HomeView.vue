@@ -80,7 +80,7 @@
             </li>
             <!-- 底部登入者頭像 -->
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="#" style="display: inline-block;">
                 <div class="d-flex justify-content-center">
                   <div class="avatar">
                     <img src="../assets/images/andychen.jpeg" alt="" srcset="">

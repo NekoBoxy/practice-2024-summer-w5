@@ -43,22 +43,40 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+              <a class="nav-link active" aria-current="page" href="#">
+                <span class="material-icons">assessment</span>
+                Dashboard
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Question</a>
+              <a class="nav-link" href="#">
+                <span class="material-icons">question_answer</span>
+                Question
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Assignment</a>
+              <a class="nav-link" href="#">
+                <span class="material-icons">assignment</span>
+                Assignment
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Course</a>
+              <a class="nav-link" href="#">
+                <span class="material-icons">video_library</span>
+                Course
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Admin</a>
+              <a class="nav-link" href="#">
+                <span class="material-icons">people</span>
+                Admin
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
+              <a class="nav-link" href="#">
+                <span class="material-icons">settings</span>
+                Settings
+              </a>
             </li>
             <!-- 底部登入者頭像 -->
             <li class="nav-item">

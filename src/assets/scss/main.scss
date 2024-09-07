@@ -18,7 +18,7 @@ img {
 
 .navbar-brand {
   display: inline-block;
-  margin: 32px 0 32px 32px;
+  padding: 32px 0 19px 32px;
 
   &:hover {
     background-color: cadetblue;
@@ -27,6 +27,7 @@ img {
 
 .nav {
   margin-left: 32px;
+  margin-bottom: 32px; // 多推出空間給登入者區塊用
 
   a {
     display: inline-block;
@@ -34,6 +35,14 @@ img {
     &:hover {
       background-color: cadetblue;
     }
+  }
+
+  ul {
+    position: relative;
+  }
+
+  .nav-item {
+    padding-block: 13px;
   }
 
   .nav-link {
@@ -53,7 +62,23 @@ img {
       vertical-align: middle;
       line-height: 1.5;
     }
+  }
 
+  .nav-item:last-child {
+    position: absloute;
+    padding: 0;
+    // 垂直往下移 32 px === 子層往下移 32px 的空間
+    // 也等於子層超出父層 32px
+    // 故父層需推出空間才不會破版
+    transform: translate(0, 32px);
+
+    .nav-link {
+      padding: 0;
+    }
+  }
+
+  .avatar {
+    padding-right: 16px;
   }
 
   .avatar img {
@@ -63,4 +88,15 @@ img {
     border-radius: 24px;
   }
 
+  .data-box p:nth-child(1) {
+    line-height: 19px;
+    margin-bottom: 4px;
+  }
+
+  .data-box p:last-child {
+    font-size: 14px;
+    line-height: 27px;
+    color: #6C757D;
+    margin-bottom: 0;
+  }
 }

@@ -35,64 +35,67 @@
     <div class="container">
       <div class="row">
         <!-- 左側選單 -->
-        <div class="col-3">
-          <a class="navbar-brand" href="#">
-            <img src="../assets/images/logo.svg" alt="">
-          </a>
+        <div class="menu-box" style="background-color: #F8F9FA;">
+          <div class="col-3">
+            <a class="navbar-brand" href="javascript:;">
+              <img src="../assets/images/logo.svg" alt="">
+            </a>
 
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <span class="material-icons">assessment</span>
-                <span class="nav-title">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="material-icons">question_answer</span>
-                <div class="nav-title">Question</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="material-icons">assignment</span>
-                <div class="nav-title">Assignment</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="material-icons">video_library</span>
-                <div class="nav-title">Course</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="material-icons">people</span>
-                <div class="nav-title">Admin</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="material-icons">settings</span>
-                <div class="nav-title">Settings</div>
-              </a>
-            </li>
-            <!-- 底部登入者頭像 -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <div class="d-flex justify-content-center">
-                  <div class="avatar">
-                    <img src="../assets/images/andychen.jpeg" alt="" srcset="">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="javascript:;">
+                  <span class="material-icons">assessment</span>
+                  <span class="nav-title">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <span class="material-icons">question_answer</span>
+                  <div class="nav-title">Question</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <span class="material-icons">assignment</span>
+                  <div class="nav-title">Assignment</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <span class="material-icons">video_library</span>
+                  <div class="nav-title">Course</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <span class="material-icons">people</span>
+                  <div class="nav-title">Admin</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <span class="material-icons">settings</span>
+                  <div class="nav-title">Settings</div>
+                </a>
+              </li>
+              <!-- 底部登入者頭像 -->
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="avatar">
+                      <img src="../assets/images/andychen.jpeg" alt="" srcset="">
+                    </div>
+                    <div class="data-box">
+                      <p>Andy Chen</p>
+                      <p>andy0401@mail.com</p>
+                    </div>
                   </div>
-                  <div class="data-box">
-                    <p>Andy Chen</p>
-                    <p>andy0401@mail.com</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+
 
         <!-- 右側內容 -->
         <div class="col-9">

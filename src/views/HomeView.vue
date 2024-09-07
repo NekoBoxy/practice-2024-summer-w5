@@ -99,11 +99,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="index">
-    <div class="container">
-      <div class="row">
-        <!-- 左側選單 -->
-        <div class="col-3 aside">
+  <div class="container">
+    <div class="row">
+      <!-- 左側選單 -->
+      <div class="col-3 aside-menu d-flex flex-column">
+        <div class="top-group">
           <a class="navbar-brand" href="javascript:;">
             <img src="../assets/images/logo.svg" alt="">
           </a>
@@ -145,84 +145,85 @@ onMounted(() => {
                 <div class="nav-title">Settings</div>
               </a>
             </li>
-            <!-- 底部登入者頭像 -->
-            <li class="nav-item">
-              <a class="nav-link" href="javascript:;">
-                <div class="d-flex justify-content-center align-items-center">
-                  <div class="avatar">
-                    <img src="../assets/images/andychen.jpeg" alt="" srcset="">
-                  </div>
-                  <div class="data-box">
-                    <p>Andy Chen</p>
-                    <p>andy0401@mail.com</p>
-                  </div>
-                </div>
-              </a>
-            </li>
           </ul>
         </div>
 
-        <!-- 右側內容 -->
-        <div class="col-9 main-table">
-          <div class="table-ctrl d-flex justify-content-between align-items-center" style="outline: 1px solid red;">
-            <div class="group-start d-flex">
-              <h2>Admin</h2>
 
-              <button type="button" class="btn btn-add">
-                <span class="material-icons">add</span>
-                <span>Add New Admin</span>
-              </button>
+        <!-- 底部登入者頭像 -->
+        <div class="user">
+          <a href="javascript:;">
+            <div class="d-flex justify-content-center">
+              <div class="avatar">
+                <img src="../assets/images/andychen.jpeg" alt="" srcset="">
+              </div>
+              <div class="data-box">
+                <p>Andy Chen</p>
+                <p>andy0401@mail.com</p>
+              </div>
             </div>
+          </a>
+        </div>
+      </div>
 
-            <div class="group-end">
-              <button type="button" class="btn btn-search">
-                <span class="material-icons">search</span>
-              </button>
+      <!-- 右側內容 -->
+      <div class="col-9 main-table">
+        <div class="table-ctrl d-flex justify-content-between align-items-center" style="outline: 1px solid red;">
+          <div class="group-start d-flex">
+            <span class="admin">Admin</span>
 
-              <button type="button" class="btn btn-notify">
-                <span class="material-icons">notifications_active</span>
-              </button>
-            </div>
+            <button type="button" class="btn btn-add">
+              <span class="material-icons">add</span>
+              <span>Add New Admin</span>
+            </button>
           </div>
 
-          <table class="table table-content">
-            <thead>
-              <tr>
-                <th scope="col" class="table-th-id">
-                  ID
-                  <span class="material-icons">arrow_downward</span>
-                </th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Verified</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
+          <div class="group-end">
+            <button type="button" class="btn btn-search">
+              <span class="material-icons">search</span>
+            </button>
 
-            <tbody>
-              <tr v-for="item in tableData" :key="item.id">
-                <th scope="row" class="table-row-id">#{{ item.id }}</th>
-                <td>{{ item.name }}</td>
-                <td>{{ item.email }}</td>
-                <td>{{ verifyToCht(item.verified) }}</td>
-                <td class="table-row-ctrl">
-                  <span class="material-icons icon-visible" v-if="item.isVisible">visibility</span>
-                  <span class="material-icons icon-visible" v-else>visibility_off</span>
-                  <span class="material-icons icon-edit">edit</span>
+            <button type="button" class="btn btn-notify">
+              <span class="material-icons">notifications_active</span>
+            </button>
+          </div>
+        </div>
 
-                  <!-- <CModal :data="item" :is-modal-show="item.isVisible" @click="submitEdit(result)">
+        <table class="table table-content">
+          <thead>
+            <tr>
+              <th scope="col" class="table-title">
+                ID
+                <span class="material-icons">arrow_downward</span>
+              </th>
+              <th scope="col" class="table-title">Name</th>
+              <th scope="col" class="table-title">Email</th>
+              <th scope="col" class="table-title">Verified</th>
+              <th scope="col" class="table-title"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-for="item in tableData" :key="item.id">
+              <th scope="row" class="table-row-id">#{{ item.id }}</th>
+              <td>{{ item.name }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ verifyToCht(item.verified) }}</td>
+              <td class="table-row-ctrl">
+                <span class="material-icons icon-visible" v-if="item.isVisible">visibility</span>
+                <span class="material-icons icon-visible" v-else>visibility_off</span>
+                <span class="material-icons icon-edit">edit</span>
+
+                <!-- <CModal :data="item" :is-modal-show="item.isVisible" @click="submitEdit(result)">
                     <span class="material-icons icon-edit">edit</span>
                   </CModal> -->
 
-                </td>
-              </tr>
+              </td>
+            </tr>
 
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+        </table>
       </div>
     </div>
-
   </div>
 
 </template>

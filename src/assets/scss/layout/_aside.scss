@@ -1,12 +1,20 @@
-.aside {
+.aside-menu {
   padding-top: 32px;
-  // padding-left: 32px;
   background-color: $bg-color-1;
+
+  // 清空 BT 預設樣式
+  .nav-link {
+    padding: 0;
+  }
 }
 
 .navbar-brand {
   display: inline-block;
-  padding: 0 0 19px 32px;
+  // 用 inline-block 必加
+  vertical-align: middle; // 修正多餘的 2-3 px
+  // padding: 0 0 0 32px;
+  padding-left: 32px;
+  padding-bottom: 19px;
 
   &:hover {
     background-color: cadetblue;
@@ -19,18 +27,23 @@
 
   a {
     display: inline-block;
+    vertical-align: middle;
 
     &:hover {
       background-color: cadetblue;
     }
   }
 
-  ul {
-    position: relative;
-  }
+  // ul {
+  //   position: relative;
+  // }
 
   .nav-item {
     padding-block: 13px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .nav-link {
@@ -51,19 +64,13 @@
       line-height: 1.5;
     }
   }
+}
 
-  .nav-item:last-child {
-    position: absloute;
-    padding: 0;
-    // 垂直往下移 32 px === 子層往下移 32px 的空間
-    // 也等於子層超出父層 32px
-    // 故父層需推出空間才不會破版
-    transform: translate(0, 32px);
-
-    .nav-link {
-      padding: 0;
-    }
-  }
+.aside-menu .user {
+  // margin-top: 362px;
+  margin-top: auto; // 推出最大間距
+  padding-left: 32px;
+  margin-bottom: 32px;
 
   .avatar {
     padding-right: 16px;
@@ -87,4 +94,5 @@
     color: $font-color-light;
     margin-bottom: 0;
   }
+
 }

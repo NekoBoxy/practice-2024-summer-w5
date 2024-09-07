@@ -16,9 +16,14 @@ img {
   height: auto;
 }
 
+.left-menu,
+.right-table {
+  margin-top: 32px;
+}
+
 .navbar-brand {
   display: inline-block;
-  padding: 32px 0 19px 32px;
+  padding: 0 0 19px 32px;
 
   &:hover {
     background-color: cadetblue;

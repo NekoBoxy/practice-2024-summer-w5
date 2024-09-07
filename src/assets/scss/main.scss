@@ -1,107 +1,14 @@
 // 英文字體 - Roboto Mono & lato
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+@import '../../../node_modules/bootstrap/scss/functions.scss';
+@import './helpers/variables';
+
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
-body {
-  font-size: 16px;
-  font-family: "Lato", "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.5;
-}
+@import './helpers/utilities';
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.left-menu,
-.right-table {
-  margin-top: 32px;
-}
-
-.navbar-brand {
-  display: inline-block;
-  padding: 0 0 19px 32px;
-
-  &:hover {
-    background-color: cadetblue;
-  }
-}
-
-.nav {
-  margin-left: 32px;
-  margin-bottom: 32px; // 多推出空間給登入者區塊用
-
-  a {
-    display: inline-block;
-
-    &:hover {
-      background-color: cadetblue;
-    }
-  }
-
-  ul {
-    position: relative;
-  }
-
-  .nav-item {
-    padding-block: 13px;
-  }
-
-  .nav-link {
-    color: #212529;
-    padding-top: 0;
-    padding-left: 0;
-    font-weight: bold;
-    font-size: inherit;
-
-    .material-icons {
-      padding-right: 16px;
-      vertical-align: middle;
-    }
-
-    .nav-title {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 1.5;
-    }
-  }
-
-  .nav-item:last-child {
-    position: absloute;
-    padding: 0;
-    // 垂直往下移 32 px === 子層往下移 32px 的空間
-    // 也等於子層超出父層 32px
-    // 故父層需推出空間才不會破版
-    transform: translate(0, 32px);
-
-    .nav-link {
-      padding: 0;
-    }
-  }
-
-  .avatar {
-    padding-right: 16px;
-  }
-
-  .avatar img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 24px;
-  }
-
-  .data-box p:nth-child(1) {
-    line-height: 19px;
-    margin-bottom: 4px;
-  }
-
-  .data-box p:last-child {
-    font-size: 14px;
-    line-height: 27px;
-    color: #6C757D;
-    margin-bottom: 0;
-  }
-}
+@import './base/base';
+@import './layout/aside';
+@import './pages/index';

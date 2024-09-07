@@ -35,7 +35,7 @@
     <div class="container">
       <div class="row">
         <!-- 左側選單 -->
-        <div class="col-3 left-menu">
+        <div class="col-3 left-menu" style="background-color: #F8F9FA;">
           <a class="navbar-brand" href="javascript:;">
             <img src="../assets/images/logo.svg" alt="">
           </a>
@@ -93,13 +93,26 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="left-menu" style="background-color: #F8F9FA;">
-
-        </div> -->
-
 
         <!-- 右側內容 -->
         <div class="col-9 right-table">
+          <div class="table-ctrl">
+            <h2>Admin</h2>
+
+            <button type="button">
+              <span class="material-icons">add</span>
+              Add New Admin
+            </button>
+
+            <button type="button">
+              <span class="material-icons">search</span>
+            </button>
+
+            <button type="button">
+              <span class="material-icons">notifications_active</span>
+            </button>
+          </div>
+
           <table>
             <thead>
               <tr>
@@ -115,9 +128,6 @@
             </tbody>
           </table>
         </div>
-        <!-- <div class="right-table">
-
-        </div> -->
       </div>
     </div>
 

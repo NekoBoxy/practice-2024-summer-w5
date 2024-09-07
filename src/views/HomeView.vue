@@ -1,33 +1,93 @@
 <script setup>
-// import { ref, onMounted } from "vue";
+import { ref, onMounted } from "vue";
+import CModal from "@/components/CModal.vue";
 
-// 法 1 - 只引入需要的功能
-// import { Modal } from 'bootstrap';
-// const myModal = ref(null);
+const verifyToCht = function (state) {
+  let cht = "";
 
-// onMounted(() => {
-//   const test = new Modal(myModal.value);
-//   test.show();
-// })
+  if (state) {
+    cht = "Yes";
+  } else {
+    cht = "No";
+  }
 
-// 法 2 - 引入全部的 bootstrap
-// import * as bootstrap from 'bootstrap';
-// const myModal = ref(null);
+  return cht;
+}
 
-// onMounted(() => {
-//   const test = new bootstrap.Modal(myModal.value, {});
-//   test.show();
-// });
-
-// 法 3 - 跟法 1 有點像，只是引入檔案的路徑更明確
-// import * as bootstrap from 'bootstrap'; // 依需求決定是否引入全部
-// import Modal from 'bootstrap/js/dist/modal';
-// const myModal = ref(null);
-
-// onMounted(() => {
-//   const test = new Modal(myModal.value);
-//   test.show();
-// });
+const tableData = ref(
+  [
+    {
+      id: 1,
+      name: "Emir Wicks",
+      email: "emir.wicks@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 2,
+      name: "Zaina Goldsmith",
+      email: "zaina.goldsmith@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 3,
+      name: "Mahima Lopez",
+      email: "mahima.lopez@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 4,
+      name: "Pharrell Murray",
+      email: "pharrell.murray@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 5,
+      name: "Annika Mcbride",
+      email: "annika.mcbride@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 6,
+      name: "Fatimah Clark",
+      email: "fatimah.clark@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 7,
+      name: "Klaudia Rhodes",
+      email: "klaudia.rhodes@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 8,
+      name: "Tillie Lucero",
+      email: "tillie.lucero@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 9,
+      name: "Sabrina Stephenson",
+      email: "sabrina.stephenson@mail.com",
+      verified: true,
+      isVisible: true
+    },
+    {
+      id: 10,
+      name: "Annie Smith",
+      email: "annie.smith@mail.com",
+      verified: true,
+      isVisible: true
+    },
+  ]
+);
 </script>
 
 <template>
@@ -96,34 +156,56 @@
 
         <!-- 右側內容 -->
         <div class="col-9 main-table">
-          <div class="table-ctrl" style="outline: 1px solid red;">
-            <h2>Admin</h2>
+          <div class="table-ctrl d-flex justify-content-between align-items-center" style="outline: 1px solid red;">
+            <div class="group-start d-flex">
+              <h2>Admin</h2>
 
-            <button type="button" class="btn btn-add">
-              <span class="material-icons">add</span>
-            </button>
-            <span>Add New Admin</span>
+              <button type="button" class="btn btn-add">
+                <span class="material-icons">add</span>
+                <span>Add New Admin</span>
+              </button>
+            </div>
 
-            <button type="button" class="btn btn-search">
-              <span class="material-icons">search</span>
-            </button>
+            <div class="group-end">
+              <button type="button" class="btn btn-search">
+                <span class="material-icons">search</span>
+              </button>
 
-            <button type="button" class="btn btn-notify">
-              <span class="material-icons">notifications_active</span>
-            </button>
+              <button type="button" class="btn btn-notify">
+                <span class="material-icons">notifications_active</span>
+              </button>
+            </div>
           </div>
 
-          <table class="table-content">
+          <table class="table table-content">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Verified</th>
-                <th></th>
+                <th scope="col" class="table-th-id">
+                  ID
+                  <span class="material-icons">arrow_downward</span>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
               </tr>
             </thead>
+
             <tbody>
+              <tr v-for="item in tableData" :key="item.id">
+                <th scope="row" class="table-row-id">#{{ item.id }}</th>
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ verifyToCht(item.verified) }}</td>
+                <td class="table-row-ctrl">
+                  <span class="material-icons icon-visible" v-if="item.isVisible">visibility</span>
+                  <span class="material-icons icon-visible" v-else>visibility_off</span>
+                  <CModal @click="handleEdit(item)">
+                    <span class="material-icons icon-edit">edit</span>
+                  </CModal>
+
+                </td>
+              </tr>
 
             </tbody>
           </table>

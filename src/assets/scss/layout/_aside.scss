@@ -1,7 +1,7 @@
 .aside {
   padding-top: 32px;
   // padding-left: 32px;
-  background-color: $bg-color-1
+  background-color: $bg-color-1;
 }
 
 .navbar-brand {
@@ -34,7 +34,7 @@
   }
 
   .nav-link {
-    color: $font-color-main;
+    color: $gray-900;
     padding-top: 0;
     padding-left: 0;
     font-weight: bold;

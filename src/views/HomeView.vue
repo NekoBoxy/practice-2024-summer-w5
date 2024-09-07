@@ -35,7 +35,7 @@
     <div class="container">
       <div class="row">
         <!-- 左側選單 -->
-        <div class="col-3 left-menu" style="background-color: #F8F9FA;">
+        <div class="col-3 aside">
           <a class="navbar-brand" href="javascript:;">
             <img src="../assets/images/logo.svg" alt="">
           </a>
@@ -95,25 +95,25 @@
         </div>
 
         <!-- 右側內容 -->
-        <div class="col-9 right-table">
-          <div class="table-ctrl">
+        <div class="col-9 main-table">
+          <div class="table-ctrl" style="outline: 1px solid red;">
             <h2>Admin</h2>
 
-            <button type="button">
+            <button type="button" class="btn btn-add">
               <span class="material-icons">add</span>
-              Add New Admin
             </button>
+            <span>Add New Admin</span>
 
-            <button type="button">
+            <button type="button" class="btn btn-search">
               <span class="material-icons">search</span>
             </button>
 
-            <button type="button">
+            <button type="button" class="btn btn-notify">
               <span class="material-icons">notifications_active</span>
             </button>
           </div>
 
-          <table>
+          <table class="table-content">
             <thead>
               <tr>
                 <th>ID</th>

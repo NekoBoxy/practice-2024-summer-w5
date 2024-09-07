@@ -1,6 +1,7 @@
-.left-menu,
-.right-table {
+.aside {
   padding-top: 32px;
+  // padding-left: 32px;
+  background-color: $bg-color-1
 }
 
 .navbar-brand {
@@ -33,7 +34,7 @@
   }
 
   .nav-link {
-    color: #212529;
+    color: $font-color-main;
     padding-top: 0;
     padding-left: 0;
     font-weight: bold;
@@ -83,7 +84,7 @@
   .data-box p:last-child {
     font-size: 14px;
     line-height: 27px;
-    color: #6C757D;
+    color: $font-color-light;
     margin-bottom: 0;
   }
 }

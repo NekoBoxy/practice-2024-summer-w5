@@ -1,0 +1,42 @@
+.main-table {
+  padding-top: 32px;
+  padding-left: 32px;
+
+  button {
+    outline: none;
+    border: none;
+
+    &:hover {
+      background-color: cadetblue;
+    }
+  }
+}
+
+// 不用 flex 水平排列的做法
+.table-ctrl {
+
+  button {
+    padding: 0;
+    height: fit-content;
+  }
+
+  :is(h2, button, .btn.material-icons) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    // vertical-align: middle;
+  }
+
+  .btn-add {
+    padding-left: 80px;
+  }
+
+  .btn-search {}
+
+  .btn-notify {}
+}

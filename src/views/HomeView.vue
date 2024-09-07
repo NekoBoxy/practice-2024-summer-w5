@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import CModal from "@/components/CModal.vue";
+// import CModal from "@/components/CModal.vue";
 
 const verifyToCht = function (state) {
   let cht = "";
@@ -88,6 +88,14 @@ const tableData = ref(
     },
   ]
 );
+
+const submitEdit = function (data) {
+  console.log("data: ", data);
+};
+
+onMounted(() => {
+
+});
 </script>
 
 <template>
@@ -200,9 +208,11 @@ const tableData = ref(
                 <td class="table-row-ctrl">
                   <span class="material-icons icon-visible" v-if="item.isVisible">visibility</span>
                   <span class="material-icons icon-visible" v-else>visibility_off</span>
-                  <CModal @click="handleEdit(item)">
+                  <span class="material-icons icon-edit">edit</span>
+
+                  <!-- <CModal :data="item" :is-modal-show="item.isVisible" @click="submitEdit(result)">
                     <span class="material-icons icon-edit">edit</span>
-                  </CModal>
+                  </CModal> -->
 
                 </td>
               </tr>

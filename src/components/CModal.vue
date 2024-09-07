@@ -1,21 +1,31 @@
 <script setup>
+import { ref, onMounted } from "vue";
+
 // 法 1 - 只引入需要的功能
-import { Modal } from 'bootstrap';
-const myModal = ref(null);
+// import { Modal } from 'bootstrap';
+
+// const myModal = ref(null);
+const props = defineProps({
+  data: Object,
+  isModalShow: Boolean
+});
+
+
+
 
 onMounted(() => {
   // const test = new Modal(myModal.value);
   // test.show();
+
+  // console.log("props: ", props);
 })
 </script>
 
 <template>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <slot></slot>
   </button>
 
-  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
     ref="myModal">
     <div class="modal-dialog">
@@ -33,7 +43,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style scoped></style>

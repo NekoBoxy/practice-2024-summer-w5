@@ -220,7 +220,36 @@ onMounted(() => {
           </tbody>
         </table>
 
-        <div class="pagination d-flex flex-row justify-content-end align-items-center">
+        <nav aria-label="pagination">
+          <ul class="pagination justify-content-end align-items-stretch">
+            <li class="page-item disabled">
+              <a class="page-link" aria-label="Previous">
+                <span class="material-icons">chevron_left</span>
+              </a>
+            </li>
+
+            <li class="page-item page-num-style active">
+              <a class="page-link" aria-current="page">1</a>
+            </li>
+
+            <li class="page-item page-num-style">
+              <a class="page-link" href="javascript:;">2</a>
+            </li>
+
+            <li class="page-item page-num-style">
+              <a class="page-link" href="javascript:;">3</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="javascript:;" aria-label="Next">
+                <span class="material-icons">chevron_right</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- ori -->
+        <!-- <div class="pagination d-flex flex-row justify-content-end align-items-center">
           <div class="page-item mui-icon">
             <a href="javascript:;">
               <span class="material-icons">chevron_left</span>
@@ -246,7 +275,7 @@ onMounted(() => {
               <span class="material-icons">chevron_right</span>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

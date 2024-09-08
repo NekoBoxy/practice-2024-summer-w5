@@ -21,7 +21,7 @@
   }
 }
 
-.nav {
+.aside-menu .nav {
   margin-left: 32px;
   margin-bottom: 32px; // 多推出空間給登入者區塊用
 
@@ -67,8 +67,8 @@
 }
 
 .aside-menu .user {
-  // margin-top: 362px;
-  margin-top: auto; // 推出最大間距
+  margin-top: 362px;
+  // margin-top: auto; // 推出最大間距
   padding-left: 32px;
   margin-bottom: 32px;
 
@@ -83,16 +83,21 @@
     border-radius: 24px;
   }
 
+  // .data-box p {
+  //   line-height: ;
+  // }
+
   .data-box p:nth-child(1) {
+    color: $gray-900;
     line-height: 19px;
+    font-weight: 900;
     margin-bottom: 4px;
   }
 
   .data-box p:last-child {
     font-size: 14px;
-    line-height: 27px;
+    line-height: 17px;
     color: $font-color-light;
     margin-bottom: 0;
   }
-
 }

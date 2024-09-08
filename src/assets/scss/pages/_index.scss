@@ -60,47 +60,101 @@
   }
 }
 
+// BT 元件
 .pagination {
+  margin-top: 151px;
 
-  .page-item a {
-    font-size: 1rem;
-    color: $gray-900;
-    padding: 2px 12px;
-    vertical-align: top;
+  .page-item {
+    // outline: 1px solid red;
+
+    &:first-child .page-link {
+      color: $gray-900;
+      border-radius: 2px 0px 0px 2px;
+    }
+
+    &:last-child .page-link {
+      border-radius: 0px 2px 2px 0px;
+    }
 
     &:hover {
       background-color: cadetblue;
     }
   }
 
-  .mui-icon {
-    a {
-      color: $gray-900;
-    }
-
-    .material-icons {
-      font-size: 1rem;
-      padding-block: 4px;
-      text-align: bottom;
-    }
+  .page-link {
+    padding: 0;
+    color: $gray-900;
+    border: 1px solid $color-success;
   }
 
-  .page-border {
-    border-top: 1px solid $color-success;
-    border-right: 1px solid $color-success;
-    border-bottom: 1px solid $color-success;
+  .page-num-style {
+    // padding-block: 7px; // 移到 a 裡撐開元素了
+
+    a {
+      font-size: 1rem;
+      padding: 9px 16px;
+    }
 
     &:last-child {
       border-right: none;
     }
   }
 
-  .mui-icon {
-    border: 1px solid $color-success;
+  .material-icons {
+    color: $gray-900;
+    font-size: 24px;
+    padding: 9px;
   }
 
-  .page-active a {
-    background-color: $color-success;
+  .active a {
+    --bs-pagination-active-bg: #198754;
     color: #ffffff;
+    border-color: $color-success;
   }
 }
+
+// ori
+// .pagination {
+
+//   .page-item a {
+//     font-size: 1rem;
+//     color: $gray-900;
+//     padding: 2px 12px;
+//     vertical-align: top;
+
+//     &:hover {
+//       background-color: cadetblue;
+//     }
+//   }
+
+//   .mui-icon {
+//     a {
+//       color: $gray-900;
+//     }
+
+//     .material-icons {
+//       font-size: 1rem;
+//       padding-block: 4px;
+//       text-align: bottom;
+//     }
+//   }
+
+//   .page-border {
+//     border-top: 1px solid $color-success;
+//     border-right: 1px solid $color-success;
+//     border-bottom: 1px solid $color-success;
+
+//     &:last-child {
+//       border-right: none;
+//     }
+//   }
+
+//   .mui-icon {
+//     border: 1px solid $color-success;
+//   }
+
+//   .page-active a {
+//     background-color: $color-success;
+//     color: #ffffff;
+//   }
+// }

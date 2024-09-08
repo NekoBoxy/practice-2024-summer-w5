@@ -166,7 +166,7 @@ onMounted(() => {
 
       <!-- 右側內容 -->
       <div class="col-9 main-table">
-        <div class="table-ctrl d-flex justify-content-between align-items-center" style="outline: 1px solid red;">
+        <div class="table-ctrl d-flex justify-content-between align-items-center">
           <div class="group-start d-flex">
             <span class="admin">Admin</span>
 
@@ -220,28 +220,28 @@ onMounted(() => {
           </tbody>
         </table>
 
-        <div class="pagination d-flex flex-row justify-content-end">
-          <div class="page-item">
+        <div class="pagination d-flex flex-row justify-content-end align-items-center">
+          <div class="page-item mui-icon">
             <a href="javascript:;">
               <span class="material-icons">chevron_left</span>
             </a>
           </div>
-          <div class="page-item page-active">
+          <div class="page-item page-border page-active">
             <a href="javascript:;">
               1
             </a>
           </div>
-          <div class="page-item">
+          <div class="page-item page-border">
             <a href="javascript:;">
               2
             </a>
           </div>
-          <div class="page-item">
+          <div class="page-item page-border">
             <a href="javascript:;">
               3
             </a>
           </div>
-          <div class="page-item">
+          <div class="page-item mui-icon">
             <a href="javascript:;">
               <span class="material-icons">chevron_right</span>
             </a>

@@ -4,10 +4,6 @@
   button {
     outline: none;
     border: none;
-
-    &:hover {
-      background-color: cadetblue;
-    }
   }
 }
 
@@ -65,20 +61,46 @@
 }
 
 .pagination {
-  color: $gray-900;
 
-  .material-icons {
+  .page-item a {
     font-size: 1rem;
+    color: $gray-900;
+    padding: 2px 12px;
+    vertical-align: top;
+
+    &:hover {
+      background-color: cadetblue;
+    }
   }
 
-  .page-item {
-    font-size: 1rem;
-    // line-height: 1.5;
+  .mui-icon {
+    a {
+      color: $gray-900;
+    }
 
+    .material-icons {
+      font-size: 1rem;
+      padding-block: 4px;
+      text-align: bottom;
+    }
   }
 
-  // .page-active {
-  //   background-color: $color-success;
-  //   color: #ffffff;
-  // }
+  .page-border {
+    border-top: 1px solid $color-success;
+    border-right: 1px solid $color-success;
+    border-bottom: 1px solid $color-success;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .mui-icon {
+    border: 1px solid $color-success;
+  }
+
+  .page-active a {
+    background-color: $color-success;
+    color: #ffffff;
+  }
 }

@@ -148,7 +148,6 @@ onMounted(() => {
           </ul>
         </div>
 
-
         <!-- 底部登入者頭像 -->
         <div class="user">
           <a href="javascript:;">
@@ -188,7 +187,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <table class="table table-content">
+        <table class="table-content table">
           <thead>
             <tr>
               <th scope="col" class="table-title">
@@ -216,12 +215,38 @@ onMounted(() => {
                 <!-- <CModal :data="item" :is-modal-show="item.isVisible" @click="submitEdit(result)">
                     <span class="material-icons icon-edit">edit</span>
                   </CModal> -->
-
               </td>
             </tr>
-
           </tbody>
         </table>
+
+        <div class="pagination d-flex flex-row justify-content-end">
+          <div class="page-item">
+            <a href="javascript:;">
+              <span class="material-icons">chevron_left</span>
+            </a>
+          </div>
+          <div class="page-item page-active">
+            <a href="javascript:;">
+              1
+            </a>
+          </div>
+          <div class="page-item">
+            <a href="javascript:;">
+              2
+            </a>
+          </div>
+          <div class="page-item">
+            <a href="javascript:;">
+              3
+            </a>
+          </div>
+          <div class="page-item">
+            <a href="javascript:;">
+              <span class="material-icons">chevron_right</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

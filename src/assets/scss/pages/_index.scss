@@ -36,6 +36,19 @@
 }
 
 .table-content {
+  // 修改 BT 表格元件預設值 - 開始
+  tbody td {
+    padding-block: 18px;
+    padding-left: 0;
+  }
+
+  // 修改 BT 表格元件預設值 - 結束
+  .table-title .material-icons {
+    font-size: 18px;
+    color: $color-success;
+    vertical-align: text-top;
+  }
+
   .table-title {
     height: 39px;
     padding: 0px;
@@ -57,12 +70,16 @@
 
   .table-row-ctrl {
     text-align: end;
+
+    .material-icons {
+      font-size: 24px;
+    }
   }
 }
 
 // BT 元件
 .pagination {
-  margin-top: 151px;
+  margin-top: 63  px;
 
   .page-item {
     // outline: 1px solid red;

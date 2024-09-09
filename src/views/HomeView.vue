@@ -102,7 +102,7 @@ onMounted(() => {
   <div class="container">
     <div class="row">
       <!-- 左側選單 -->
-      <div class="col-3 aside-menu d-flex flex-column">
+      <div class="col-3 aside-menu position-relative d-flex flex-column">
         <div class="top-group">
           <a class="navbar-brand" href="javascript:;">
             <img src="../assets/images/logo.svg" alt="">
@@ -149,7 +149,7 @@ onMounted(() => {
         </div>
 
         <!-- 底部登入者頭像 -->
-        <div class="user">
+        <div class="user position-absolute">
           <a href="javascript:;">
             <div class="d-flex justify-content-center">
               <div class="avatar">
@@ -190,9 +190,10 @@ onMounted(() => {
         <table class="table-content table">
           <thead>
             <tr>
-              <th scope="col" class="table-title">
-                ID
-                <span class="material-icons">arrow_downward</span>
+              <th scope="col" class="table-title">ID
+                <a href="javascript:;">
+                  <span class="material-icons">arrow_downward</span>
+                </a>
               </th>
               <th scope="col" class="table-title">Name</th>
               <th scope="col" class="table-title">Email</th>
@@ -203,7 +204,7 @@ onMounted(() => {
 
           <tbody>
             <tr v-for="item in tableData" :key="item.id">
-              <th scope="row" class="table-row-id">#{{ item.id }}</th>
+              <td scope="row" class="table-row-id">#{{ item.id }}</td>
               <td>{{ item.name }}</td>
               <td>{{ item.email }}</td>
               <td>{{ verifyToCht(item.verified) }}</td>

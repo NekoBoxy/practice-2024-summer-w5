@@ -38,8 +38,10 @@
 .table-content {
   // 修改 BT 表格元件預設值 - 開始
   tbody td {
-    padding-block: 18px;
+    padding-block: 17px;
     padding-left: 0;
+    line-height: 0;
+    vertical-align: middle;
   }
 
   // 修改 BT 表格元件預設值 - 結束
@@ -79,7 +81,10 @@
 
 // BT 元件
 .pagination {
-  margin-top: 63  px;
+  // margin-top: 63px;
+  position: absolute;
+  bottom: 32px;
+
 
   .page-item {
     // outline: 1px solid red;

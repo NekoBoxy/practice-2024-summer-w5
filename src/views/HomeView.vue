@@ -165,7 +165,7 @@ onMounted(() => {
       </div>
 
       <!-- 右側內容 -->
-      <div class="col-9 main-table">
+      <div class="col-9 main-table position-relative">
         <div class="table-ctrl d-flex justify-content-between align-items-center">
           <div class="group-start d-flex">
             <span class="admin">Admin</span>
@@ -187,7 +187,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <table class="table-content table">
+        <table class="table-content table table-striped">
           <thead>
             <tr>
               <th scope="col" class="table-title">ID
